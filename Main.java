@@ -14,13 +14,20 @@ class Student{
         this.rollNo = rollNo;
         this.course = course;
     }
+    @Override
+    protected void finalize() throws Throwable{
+        System.out.println("Object is being destroyed");
+    }
 }
 
 public class Main{
     public static void main(String[] args){
         Student[] students = new Student[3];
-        Student student1 = new Student("Alice", 1, "Math"); // this new keyword dynamically allocates memory during runtime
-        students[0] = student1;
-        System.out.println(Arrays.toString(students));
+//        Student student1 = new Student("Alice", 1, "Math"); // this new keyword dynamically allocates memory during runtime
+//        students[0] = student1;
+//        System.out.println(Arrays.toString(students));
+        for(int i = 0; i < 10000000; i++){
+            Student s = new Student();
+        }
     }
 }
