@@ -1,13 +1,13 @@
 public class Main{
     public static void main(String[] args){
-        Box box = new Box(10.0f);
-        System.out.println(box.height);
+//        Box box = new Box(10.0f);
+//        System.out.println(box.height);
 
-        BoxWeight boxWeight = new BoxWeight(10,20,30,40);
-        System.out.println(boxWeight.weight);
+//        BoxWeight boxWeight = new BoxWeight(10,20,30,40);
+//        System.out.println(boxWeight.weight);
 
-        Box box2 = new Box(10.0f);
-        System.out.println(box2.height);
+//        Box box2 = new Box(10.0f);
+//        System.out.println(box2.height);
 
         // BoxWeight box3 = new Box(10,20,30); // This is not allowed
         // because Box is now not initialized with weight
@@ -15,6 +15,16 @@ public class Main{
         // Parent class = new Child class [is Allowed]
         // Child class = new Parent class [is Not Allowed]
 //        System.out.println(box3.weight);
+
+
+        BoxPrice b = new BoxPrice(10,20,30,40,50);
+        System.out.println(b.weight);
+
+        BoxWeight bw = new BoxPrice(10,20,30,40,50);
+        System.out.println(bw.weight);
+        // System.out.println(bw.price); // Not Allowed
+        // Parent class reference variable can only access the properties of parent class
+        // even if the object is of child class
     }
 }
 

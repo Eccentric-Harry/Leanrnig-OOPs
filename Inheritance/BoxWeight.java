@@ -8,7 +8,7 @@ class BoxWeight extends Box{
     BoxWeight(float lenght, float height, float depth, float wieght){
         super(lenght, height, depth); // calls the constructor of the parent class
         // if this is not called, then the default constructor of the parent class is called
-        System.out.println(super.width);// accessing the parent class property
+//        System.out.println(super.width);// accessing the parent class property
         this.weight = wieght;
     }
 
@@ -17,4 +17,8 @@ class BoxWeight extends Box{
         this.weight = bw.weight;
     }
     // can be called because we can pass objects of type boxweight in box where box can be accecpted.
+    BoxWeight(float side, float weight){
+        super(side);
+        this.weight = weight;
+    }
 }
